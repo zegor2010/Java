@@ -1,31 +1,45 @@
 import java.util.Scanner;
 import java.sql.SQLOutput;
+import java.util.Random;
 
 public class Homework {
-    public static void Homework(String[] args) {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter a");
+        double a = input.nextDouble();
+        System.out.println("Enter b");
+        double b = input.nextDouble();
+        System.out.println("Enter c");
+        double c = input.nextDouble();
+        double root1 = ((-b + Math.pow(b * b - (4 * a * c), 0.5)) / 2 * a);
+        double root2 = ((-b - Math.pow(b * b - (4 * a * c), 0.5)) / 2 * a);
+        if (b * b - (4 * a * c) == 0)
+            System.out.println(root1);
+        else if (b * b - (4 * a * c) > 0)
+            System.out.println(root1 + " and " + root2);
+        else System.out.println("The equation has no real roots");
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введіть свій бал");
-        int scale = scanner.nextInt();
-        int score = 0;
-        if(scale > 10)
-            score = 3 * scale;
-        else
-            score = 4 * scale;
-
-        System.out.println("Введіть свій зароботок");
-        int income = scanner.nextInt();
-        double tax = 0;
-        if(income > 10000)
-            tax = income * 0.2;
-        else
-            tax = income * 0.17 + 1000;
-
-        System.out.println("введіть літеру");
-        int number = scanner.nextInt();
-        if(number % 3 == 0)
-            System.out.println("i");
-        else
-            System.out.println("j");
+        random_number();
     }
-}
+
+        public static int random_number (){
+            Random random = new Random();
+            int randomInt = (int) (Math.random() * 12) + 1;
+            switch (randomInt) {
+                case 1:  System.out.println("January"); break;
+                case 2:  System.out.println("February"); break;
+                case 3:  System.out.println("March"); break;
+                case 4:  System.out.println("April"); break;
+                case 5:  System.out.println("May"); break;
+                case 6:  System.out.println("June"); break;
+                case 7:  System.out.println("July"); break;
+                case 8:  System.out.println("August"); break;
+                case 9:  System.out.println("September"); break;
+                case 10: System.out.println("October"); break;
+                case 11: System.out.println("November"); break;
+                case 12: System.out.println("December"); break;
+            }
+            return randomInt;
+        }
+    }
+
