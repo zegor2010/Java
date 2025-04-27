@@ -1,9 +1,11 @@
 import java.util.Scanner;
-import java.sql.SQLOutput;
-import java.util.Random;
 
 public class Homework {
     public static void main(String[] args) {
+        random_number();
+        algebra();
+    }
+    public static void algebra () {
         Scanner input = new Scanner(System.in);
         System.out.println("enter a");
         double a = input.nextDouble();
@@ -11,19 +13,18 @@ public class Homework {
         double b = input.nextDouble();
         System.out.println("Enter c");
         double c = input.nextDouble();
-        double root1 = ((-b + Math.pow(b * b - (4 * a * c), 0.5)) / 2 * a);
-        double root2 = ((-b - Math.pow(b * b - (4 * a * c), 0.5)) / 2 * a);
-        if (b * b - (4 * a * c) == 0)
+        double equation = b * b - (4 * a * c);
+        double root1 = ((-b + Math.pow(equation, 0.5)) / 2 * a);
+        double root2 = ((-b - Math.pow(equation, 0.5)) / 2 * a);
+        if (equation == 0)
             System.out.println(root1);
-        else if (b * b - (4 * a * c) > 0)
+        else if (equation > 0)
             System.out.println(root1 + " and " + root2);
         else System.out.println("The equation has no real roots");
-
-        random_number();
     }
 
-        public static int random_number (){
-            Random random = new Random();
+
+        public static void random_number (){
             int randomInt = (int) (Math.random() * 12) + 1;
             switch (randomInt) {
                 case 1:  System.out.println("January"); break;
@@ -39,7 +40,6 @@ public class Homework {
                 case 11: System.out.println("November"); break;
                 case 12: System.out.println("December"); break;
             }
-            return randomInt;
         }
     }
 
