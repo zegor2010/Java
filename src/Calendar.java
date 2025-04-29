@@ -29,5 +29,6 @@ public class Calendar {
     public static void print(){
         System.out.println(getYear());
         System.out.println(getMonth());
+        System.out.println("Monday" + "Tuesday" + "Wednesday" + "Thursday");
     }
 }

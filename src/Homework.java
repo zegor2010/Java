@@ -41,5 +41,36 @@ public class Homework {
                 case 12: System.out.println("December"); break;
             }
         }
+
+        public static int getPentagonalNumber(int n) {
+        return n * (3 * n - 1) / 2;
+        }
+        public static void printPentagonalNumber(int n) {
+        for(int i = 1; i<=n; i++){
+            System.out.print(String.format("%7d", getPentagonalNumber(i)));
+            if(i%10 == 0)
+                System.out.println();
+        }
+        }
+        public static long sumDigits(long n) {
+        long i = 0;
+        long sum = 0;
+        while(n != 0){
+            i = n%10;
+            sum = sum + i;
+            n = n/10;
+        }
+        return sum;
+        }
+        public static int reverse(int number) {
+        int i = 0;
+        int reverse = 0;
+        while(number != 0) {
+            i = number%10;
+            reverse = reverse * 10 + i;
+            number = number/10;
+        }
+        return reverse;
+        }
     }
 
