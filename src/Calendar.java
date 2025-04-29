@@ -2,10 +2,8 @@ import java.util.Scanner;
 
 public class Calendar {
     public static Scanner sc = new Scanner(System.in);
-    public static void main(String[] args) {
-    print();
-    }
-    public static String getting_month() {
+
+    public static String getMonth() {
         System.out.println("Input number of the month");
         int month = sc.nextInt();
         switch(month) {
@@ -24,15 +22,12 @@ public class Calendar {
             default: return "Invalid month";
         }
     }
-    public static int getting_year() {
+    public static int getYear() {
         System.out.println("Input a year:");
-        int year = sc.nextInt();
-        return year;
+        return sc.nextInt();
     }
     public static void print(){
-        int year = getting_year();
-        String month = getting_month();
-        System.out.println(year);
-        System.out.println(month);
+        System.out.println(getYear());
+        System.out.println(getMonth());
     }
 }
