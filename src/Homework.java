@@ -72,5 +72,23 @@ public class Homework {
         }
         return reverse;
         }
+        public static void randomMasiv(int masiv[]){
+            for (int i = 0; i < masiv.length; i++){
+                masiv[i] = (int) (Math.random() * 100);
+            }
+        }
+        public static void printMasiv(int masiv[]) {
+            for (int i = 0; i < masiv.length; i++) {
+                System.out.print(masiv[i] + " ");
+            }
+            System.out.println();
+        }
+        public static int findSumMasiv(int masiv[]){
+            int sum = 0;
+            for (int i = 0; i<masiv.length; i++){
+                sum += masiv[i];
+            }
+            return sum;
+        }
     }
 

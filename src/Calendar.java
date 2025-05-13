@@ -3,6 +3,13 @@ import java.util.Scanner;
 public class Calendar {
     public static Scanner sc = new Scanner(System.in);
 
+    public static int daysInMonth(int getMonth) {
+        int[] January = new int[31];
+            for (int i = 0; i < masiv.length; i++) {
+                System.out.print(masiv[i] + " ");
+            }
+    }
+
     public static String getMonth() {
         System.out.println("Input number of the month");
         int month = sc.nextInt();
@@ -19,12 +26,11 @@ public class Calendar {
             case 10: return"----------October----------";
             case 11: return"----------November---------";
             case 12: return"----------December---------";
-            default: System.out.println("Invalid month"); System.exit(0);
-            return "Invalid month";
+            default: return "Invalid month";
         }
     }
     public static int getYear() {
-        System.out.println("Input a year:");
+        System.out.println("Input a year: ");
         return sc.nextInt();
     }
     public static void print(){
@@ -32,11 +38,12 @@ public class Calendar {
         System.out.println(getMonth());
         System.out.println("Mon Tue Wed Thu Fri Sat Sun");
     }
-    public static String findLeapYear(int year){
+    public static boolean findLeapYear(int year){
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-            return "Leap Year";
-        } else {
-            return "Not a Leap Year";
+            return true;
+        }
+        else{
+            return false;
         }
     }
 
