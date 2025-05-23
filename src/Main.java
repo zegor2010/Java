@@ -1,8 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        int[] masiv1 = new int[10];
-        Homework.randomMasiv(masiv1);
-        Homework.printMasiv(masiv1);
-        System.out.println(Homework.findSumMasiv(masiv1));
+        Homework.max(new double[] {1, 2, 3, 6, 7.6, 8.4, 10});
+
+//        int [] massive = new int[10];
+//        int [] copyMassive = new int[10];
+//        Homework.randomMassive(massive);
+//        Homework.printMassive(massive);
+//        copyMassive = Homework.copyMassive(massive);
+//        Homework.printMassive(copyMassive);
+//        massive.clone();
         }
+
     }

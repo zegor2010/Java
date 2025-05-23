@@ -72,23 +72,94 @@ public class Homework {
         }
         return reverse;
         }
-        public static void randomMasiv(int masiv[]){
-            for (int i = 0; i < masiv.length; i++){
-                masiv[i] = (int) (Math.random() * 100);
+        public static void randomMassive(int massive[]){
+            for (int i = 0; i < massive.length; i++){
+                massive[i] = (int) (Math.random() * 100);
             }
         }
-        public static void printMasiv(int masiv[]) {
-            for (int i = 0; i < masiv.length; i++) {
-                System.out.print(masiv[i] + " ");
+        public static void printMassive(int [] massive) {
+            for (int i = 0; i < massive.length; i++) {
+                System.out.print(massive[i] + " ");
             }
             System.out.println();
         }
-        public static int findSumMasiv(int masiv[]){
+        public static int findSumMassive(int [] massive){
             int sum = 0;
-            for (int i = 0; i<masiv.length; i++){
-                sum += masiv[i];
+            for (int i = 0; i<massive.length; i++){
+                sum += massive[i];
             }
             return sum;
         }
+        public static int [] copyMasiv(int [] masiv) {
+            int[] masiv1 = new int [masiv.length];
+            for (int i = 0; i<masiv.length; i++){
+                masiv1[i] = masiv[i];
+            }
+            return masiv1;
+        }
+        public static void comparing(){
+            Scanner scanner = new Scanner(System.in);
+            int[] numbers = new int[11];
+            System.out.println("Enter 11 integers: ");
+            for (int i = 0; i < 11; i++){
+                numbers[i] = scanner.nextInt();
+            }
+            int lastNumber = numbers[10];
+
+            for (int i = 0; i < 10; i++){
+                if (numbers[i] > lastNumber){
+                    System.out.println((i + 1) + ":" + " is greater."); }
+                else if (numbers[i] == lastNumber) {
+                    System.out.println((i + 1) + ":" + " is equal."); }
+                else {
+                    System.out.println((i + 1) + ":" + " is smaller."); }
+            }
+        }
+        public static void countOddAndEven(){
+        int evenNumbers = 0;
+        int oddNumbers = 0;
+        Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter numbers (end the program with 0): ");
+            while (true) {
+                int numbers = scanner.nextInt();
+                if(numbers == 0) break;
+                if(numbers % 2 == 0) evenNumbers++;
+                else oddNumbers++;
+            }
+            System.out.println("Number of even numbers: " + evenNumbers);
+            System.out.println("Number of odd numbers: " + oddNumbers);
+        }
+        public static void countRandomNumbers(){
+        int[] counts = new int[10];
+        for (int i = 0; i < 200; i++){
+            int randomInt = (int) (Math.random() * 10);
+            counts[randomInt]++;
+        }
+        for (int i = 0; i< counts.length; i++) {
+            System.out.println(i + ": " + counts[i] + " times");
+        }
+        }
+        public static int intAverage(int[] array){
+        int sum = 0;
+        for (int value : array) {
+            sum += value; }
+        return sum / array.length;
     }
+        public static double doubleAverage(double[] array){
+        double sum = 0;
+        for (double value : array){
+            sum += value; }
+        return sum / array.length;
+        }
+        public static double max(double[] array){
+        double highest = array[0];
+        for(double numbers : array){
+            if (numbers > highest) {
+                highest = numbers;
+            }
+        }
+            System.out.println("The highest number: " + highest);
+        return highest;
+        }
+}
 
