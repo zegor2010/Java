@@ -90,12 +90,12 @@ public class Homework {
             }
             return sum;
         }
-        public static int [] copyMasiv(int [] masiv) {
-            int[] masiv1 = new int [masiv.length];
-            for (int i = 0; i<masiv.length; i++){
-                masiv1[i] = masiv[i];
+        public static int [] copyMassive(int [] massive) {
+            int[] massive1 = new int [massive.length];
+            for (int i = 0; i<massive.length; i++){
+                massive1[i] = massive[i];
             }
-            return masiv1;
+            return massive1;
         }
         public static void comparing(){
             Scanner scanner = new Scanner(System.in);
@@ -129,15 +129,14 @@ public class Homework {
             System.out.println("Number of even numbers: " + evenNumbers);
             System.out.println("Number of odd numbers: " + oddNumbers);
         }
-        public static void countRandomNumbers(){
+        public static void countSingleDigits(){
         int[] counts = new int[10];
         for (int i = 0; i < 200; i++){
             int randomInt = (int) (Math.random() * 10);
             counts[randomInt]++;
         }
         for (int i = 0; i< counts.length; i++) {
-            System.out.println(i + ": " + counts[i] + " times");
-        }
+            System.out.println(i + ": " + counts[i] + " times"); }
         }
         public static int intAverage(int[] array){
         int sum = 0;
@@ -161,5 +160,17 @@ public class Homework {
             System.out.println("The highest number: " + highest);
         return highest;
         }
+        public static void sortIncrease(int[] massive) {
+        for (int i = 0; i < massive.length - 1; i++) {
+            for (int j = 1; j < massive.length; j++) {
+                if (massive[i] > massive[j]) {
+                    int temp = massive[1];
+                    massive[i] = massive[j];
+                    massive[j] = temp;
+                }
+            }
+        }
+    }
 }
-
+// int... data
+// public static boolean searchMassive

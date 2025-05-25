@@ -60,7 +60,6 @@ public class Calendar {
             totalDays += findLeapYear(y) ? 366 : 365;}
         for (int m = 1; m < month; m++) {
             totalDays += daysInMonth(m, year);}
-
         return totalDays;
     }
 }
