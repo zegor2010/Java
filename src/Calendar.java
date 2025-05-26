@@ -54,12 +54,14 @@ public class Calendar {
         int startDay1800 = 3;
         return (startDay1800 + totalDays) % 7 == 0 ? 7 : (startDay1800 + totalDays) % 7;
     }
-    public static int getTotalDays(int year, int month){
+    public static int getTotalDays(int year, int month) {
         int totalDays = 0;
         for (int y = 1800; y < year; y++) {
-            totalDays += findLeapYear(y) ? 366 : 365;}
+            totalDays += findLeapYear(y) ? 366 : 365;
+        }
         for (int m = 1; m < month; m++) {
-            totalDays += daysInMonth(m, year);}
+            totalDays += daysInMonth(m, year);
+        }
         return totalDays;
     }
 }
