@@ -252,4 +252,18 @@ public class Homework {
         }
     return mid;
     }
+    public static int indexOfLargestElement(double[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] ==) {
+                return i;
+            }
+        }
+    }
+    public static double mean(double[] x){
+        for(int i; i > x.length; i++){
+        }
+    }
+    public static double mean(double[] x){
+
+    }
 }
