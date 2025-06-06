@@ -29,7 +29,7 @@ public class Calendar {
             case 4: case 6: case 9: case 11:
                 return 30;
             case 2:
-                return findLeapYear(year) ? 29 : 28;
+                return isLeapYear(year) ? 29 : 28;
             default:
                 return 0;
         }
@@ -43,7 +43,7 @@ public class Calendar {
         System.out.println(getMonth());
         System.out.println("Mon Tue Wed Thu Fri Sat Sun");
     }
-    public static boolean findLeapYear(int year){
+    public static boolean isLeapYear(int year){
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             return true; }
         else{
@@ -57,7 +57,7 @@ public class Calendar {
     public static int getTotalDays(int year, int month) {
         int totalDays = 0;
         for (int y = 1800; y < year; y++) {
-            totalDays += findLeapYear(y) ? 366 : 365;
+            totalDays += isLeapYear(y) ? 366 : 365;
         }
         for (int m = 1; m < month; m++) {
             totalDays += daysInMonth(m, year);

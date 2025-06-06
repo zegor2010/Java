@@ -101,7 +101,7 @@ public class Homework {
         return reverse;
     }
 
-    public static void randomMassive(int massive[]) {
+    public static void randomMassive(int[] massive) {
         for (int i = 0; i < massive.length; i++) {
             massive[i] = (int) (Math.random() * 100);
         }
@@ -203,34 +203,53 @@ public class Homework {
         return highest;
     }
 
-    public static void sortIncrease(int[] massive) {
+    public static void sortIncrease(double[] massive) {
         for (int i = 0; i < massive.length - 1; i++) {
             for (int j = 1; j < massive.length; j++) {
                 if (massive[i] < massive[j]) {
-                    int temp = massive[i];
+                    double temp = massive[i];
                     massive[i] = massive[j];
                     massive[j] = temp;
                 }
             }
         }
     }
-    public static void sortDecrease(int[] massive) {
+    public static void sortDecrease(double[] massive) {
         for (int i = 0; i < massive.length - 1; i++) {
             for (int j = 1; j < massive.length; j++) {
                 if (massive[i] > massive[j]) {
-                    int temp = massive[i];
+                    double temp = massive[i];
                     massive[i] = massive[j];
                     massive[j] = temp;
                 }
             }
         }
     }
-    public static boolean searchMassive(boolean sort){
+    public static void sortMassive(double[] massive, boolean sort){
         if (sort){
-            return sortIncrease(); }
+            sortIncrease(massive);}
         else {
-            return sortDecrease();}
+            sortDecrease(massive);}
+    }
+    public static int leanerSearch(double[] numbers, double target){
+        for (int i = 0; i < numbers.length; i++){
+            if(numbers[i] == target){
+                return i;
+            }
+        }
+        return 0;
+    }
+    public static int binarySearch(double[] numbers, double target){
+        sortIncrease(numbers);
+        int start = 0, end = numbers.length - 1;
+        int mid = (start + end) / 2;
+        while (start <= end){
+            mid = (start + end) / 2;
+            if (numbers[mid] == target){
+                return mid;}
+            if (numbers[mid] < target){
+            }
+        }
+    return mid;
     }
 }
-// int... data
-// public static boolean searchMassive
