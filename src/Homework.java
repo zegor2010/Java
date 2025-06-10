@@ -24,7 +24,6 @@ public class Homework {
         else System.out.println("The equation has no real roots");
     }
 
-
     public static void random_number() {
         int randomInt = (int) (Math.random() * 12) + 1;
         switch (randomInt) {
@@ -214,6 +213,7 @@ public class Homework {
             }
         }
     }
+
     public static void sortDecrease(double[] massive) {
         for (int i = 0; i < massive.length - 1; i++) {
             for (int j = 1; j < massive.length; j++) {
@@ -225,12 +225,14 @@ public class Homework {
             }
         }
     }
+
     public static void sortMassive(double[] massive, boolean sort){
         if (sort){
             sortIncrease(massive);}
         else {
             sortDecrease(massive);}
     }
+
     public static int leanerSearch(double[] numbers, double target){
         for (int i = 0; i < numbers.length; i++){
             if(numbers[i] == target){
@@ -239,6 +241,7 @@ public class Homework {
         }
         return 0;
     }
+
     public static int binarySearch(double[] numbers, double target){
         sortIncrease(numbers);
         int start = 0, end = numbers.length - 1;
@@ -252,18 +255,51 @@ public class Homework {
         }
     return mid;
     }
+
     public static int indexOfLargestElement(double[] array) {
+        int largestIndex = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] ==) {
-                return i;
+            if (array[i] > array[largestIndex]) {
+                largestIndex = i;
             }
         }
+        return largestIndex;
     }
-    public static double mean(double[] x){
-        for(int i; i > x.length; i++){
-        }
-    }
-    public static double mean(double[] x){
 
+    public static double findMean(double[] x){
+        double sum = 0;
+        for(double num : x){
+            sum = sum + num;
+            double mean = sum / x.length;
+        }
+        return mean;
+    }
+
+    public static double deviation(double[] x){
+    return 0;
+    }
+
+    public static int[] reverseArray(){
+        Scanner input = new Scanner(System.in);
+        int[] reversedArray = ;
+        return reversedArray;
+    }
+
+    public static int getRandom(int[] numbers){
+    return 0;
+    }
+
+    public static int lcm(int[] numbers){
+    return 0;
+    }
+
+    public static int[] eliminateDuplicates(int[] list){
+    }
+
+    public static boolean isSorted(int[] list){
+        int[] sorted = sortDecrease(new int[] list);
+        if(isSorted(int[] list) == sorted){
+            return true;
+        }
     }
 }
