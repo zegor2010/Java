@@ -276,6 +276,7 @@ public class Homework {
     }
 
     public static double deviation(double[] x){
+        findMean(double[] x);
     return 0;
     }
 
@@ -286,7 +287,11 @@ public class Homework {
     }
 
     public static int getRandom(int[] numbers){
-    return 0;
+        for(int i = 0; i < numbers.length; i++){
+            int randomInt = (int) (Math.random() * numbers.length) + 1;
+            randomInt = numbers[randomInt];
+        }
+    return randomInt;
     }
 
     public static int lcm(int[] numbers){
