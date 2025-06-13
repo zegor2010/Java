@@ -202,7 +202,7 @@ public class Homework {
         return highest;
     }
 
-    public static void sortIncrease(double[] massive) {
+    public static double[] sortIncrease(double[] massive) {
         for (int i = 0; i < massive.length - 1; i++) {
             for (int j = 1; j < massive.length; j++) {
                 if (massive[i] < massive[j]) {
@@ -212,9 +212,10 @@ public class Homework {
                 }
             }
         }
+        return massive;
     }
 
-    public static void sortDecrease(double[] massive) {
+    public static double[] sortDecrease(double[] massive) {
         for (int i = 0; i < massive.length - 1; i++) {
             for (int j = 1; j < massive.length; j++) {
                 if (massive[i] > massive[j]) {
@@ -224,6 +225,7 @@ public class Homework {
                 }
             }
         }
+        return massive;
     }
 
     public static void sortMassive(double[] massive, boolean sort){
@@ -268,43 +270,43 @@ public class Homework {
 
     public static double findMean(double[] x){
         double sum = 0;
+        double mean = 0;
         for(double num : x){
             sum = sum + num;
-            double mean = sum / x.length;
+            mean = sum / x.length;
         }
         return mean;
     }
 
-    public static double deviation(double[] x){
-        findMean(double[] x);
-    return 0;
-    }
-
-    public static int[] reverseArray(){
-        Scanner input = new Scanner(System.in);
-        int[] reversedArray = ;
-        return reversedArray;
+    public static int[] reverseArray(int[] array){
+        int x = 0;
+        for(int i = 0, j = array.length -1; i<j; i++, j--){
+            x = array[j];
+            array[j] = array[i];
+            array[i] = x;
+        }
+        return array;
     }
 
     public static int getRandom(int[] numbers){
+        int randomInt = 0;
         for(int i = 0; i < numbers.length; i++){
-            int randomInt = (int) (Math.random() * numbers.length) + 1;
+            randomInt = (int) (Math.random() * numbers.length) + 1;
             randomInt = numbers[randomInt];
         }
     return randomInt;
     }
 
-    public static int lcm(int[] numbers){
-    return 0;
+    public static int lcm(int a, int b){
+        return 0;
     }
 
     public static int[] eliminateDuplicates(int[] list){
+        return null;
     }
 
-    public static boolean isSorted(int[] list){
-        int[] sorted = sortDecrease(new int[] list);
-        if(isSorted(int[] list) == sorted){
+    public static boolean isSorted(double[] list){
+        double[] sorted = sortDecrease(list);
             return true;
-        }
     }
 }
