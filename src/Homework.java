@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class Homework {
     public static void main(String[] args) {
-        random_number();
-        algebra();
     }
 
     public static void algebra() {
@@ -297,12 +295,50 @@ public class Homework {
     return randomInt;
     }
 
-    public static int lcm(int a, int b){
-        return 0;
+    public static int lcm(int a, int b) {
+        if (a > b) {
+            for (int i = a++; ; i++) {
+                if (i % a == 0 && i % b == 0) {
+                    return i;
+                }
+            }
+        } else {
+            for (int i = a++; ; i++) {
+                if (i % a == 0 && i % b == 0) {
+                    return i;
+                }
+            }
+        }
     }
 
     public static int[] eliminateDuplicates(int[] list){
-        return null;
+    int[] temp = new int[list.length];
+    int uniqueCount = 0;
+    for(int i = 0; i < list.length; i++){
+        boolean isDuplicate = false;
+        for(int j = 0; j < uniqueCount; j++){
+            if (list[i] == temp[j]){
+                isDuplicate = true;
+                break;
+            }
+        }
+        if(!isDuplicate){
+            temp[uniqueCount] = list[i];
+            uniqueCount++;
+        }
+    }
+    return temp;
+    }
+
+    public static long lsTime(int number){
+        long startTime = System.nanoTime();
+        int[] list = new int[number];
+        for(int i = 0; i < number; i++){
+            list[i] = i;
+        }
+        long endTime = System.nanoTime();
+        long executionTime = startTime - endTime;
+        return executionTime;
     }
 
     public static boolean isSorted(double[] list){
