@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8 ,9, 0};
-        int[] reverseArray = Homework.reverseArray(array);
-        for(int i: reverseArray){
-            System.out.println(i);
+        int[] [] array = new int[5][5];
+                Homework.fillArray(array);
+//        System.out.println();
+        System.out.println(Homework.sumArray(array));
         }
 
 //        int [] massive = new int[10];
@@ -14,5 +14,3 @@ public class Main {
 //        Homework.printMassive(copyMassive);
 //        massive.clone();
         }
-
-    }

@@ -345,4 +345,82 @@ public class Homework {
         double[] sorted = sortDecrease(list);
             return true;
     }
+
+    public static void fillArray(int[] []array){
+        for(int i = 0; i < array.length; i++){
+            System.out.println();
+            for(int j = 0; j < array[i].length; j++){
+                array[i] [j] = i+j;
+                System.out.print(array[i] [j]);
+            }
+        }
+        System.out.println();
+    }
+
+    public static int sumArray(int[] [] array){
+        int sum = 0;
+        for(int[] i:array){
+            for(int j: i){
+                sum = j+sum;
+            }
+        }
+        return sum;
+    }
+
+    public static void sortStudents(int[] score, String[] students){
+        for (int i = 0; i < score.length - 1; i++) {
+            for (int j = 1; j < score.length; j++) {
+                for (int y = 0; y < students.length - 1; y++) {
+                    for (int x = 1; x < students.length; x++) {
+                        if (score[i] > score[j]) {
+                            int temp = score[i];
+                            score[i] = score[j];
+                            score[j] = temp;
+                            String name = students[y];
+                            students[y] = students[x];
+                            students[x] = name;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public static void bubbleSort(int[] array){
+        for (int i = 0; i < array.length - 1; i++){
+            for (int j = 0; j < array.length; j++) {
+                if (array[j] > array[i]) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+    }
+
+    public static double sumRow(double[][] m){
+        double sum = 0;
+        for (int i=0; i < m.length; i++){
+            sum += m[i][0];
+        }
+        return 0;
+    }
+
+    public static double averageMajorDiagonal(double[][] m){
+        double sum = 0;
+        double average = 0;
+        for (int i = 0; i < m.length; i++){
+            sum += m[i][i];
+        }
+        average = sum / m.length;
+        return average;
+    }
+
+    public static double[] employeeHours(double[][] m){
+        return null;
+    }
+
+    public static double[][] addMatrix(double[][] a, double[][] b){
+        return null;
+    }
 }
