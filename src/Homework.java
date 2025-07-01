@@ -370,17 +370,13 @@ public class Homework {
     public static void sortStudents(int[] score, String[] students){
         for (int i = 0; i < score.length - 1; i++) {
             for (int j = 1; j < score.length; j++) {
-                for (int y = 0; y < students.length - 1; y++) {
-                    for (int x = 1; x < students.length; x++) {
                         if (score[i] > score[j]) {
                             int temp = score[i];
                             score[i] = score[j];
                             score[j] = temp;
-                            String name = students[y];
-                            students[y] = students[x];
-                            students[x] = name;
-                        }
-                    }
+                            String name = students[i];
+                            students[i] = students[j];
+                            students[j] = name;
                 }
             }
         }
@@ -398,12 +394,12 @@ public class Homework {
         }
     }
 
-    public static double sumRow(double[][] m){
+    public static double sumRow(double[][] m, int rowIndex){
         double sum = 0;
         for (int i=0; i < m.length; i++){
-            sum += m[i][0];
+            sum += m[rowIndex][i];
         }
-        return 0;
+        return sum;
     }
 
     public static double averageMajorDiagonal(double[][] m){
@@ -416,11 +412,32 @@ public class Homework {
         return average;
     }
 
-    public static double[] employeeHours(double[][] m){
-        return null;
-    }
+    public static double[] employeeHours(double[][] hours) {
+        int sum = 0;
+        for (int i = 0; i < hours.length; i++) {
+            for (int j = 0; j < hours.length; j++) {
+                sum += hours[i][j];
+            }
+        }
+            return null;
+        }
+
 
     public static double[][] addMatrix(double[][] a, double[][] b){
         return null;
+    }
+
+    public static double[] sumMaxRow(double[][] array){
+        double sum = 0;
+        double newSum = 0;
+        double[] maxRow = new double[2];
+        for (int i = 0; i < array.length; i++) {
+            newSum = sumRow(array, i);
+            if(sum<newSum){
+                maxRow[0] = i;
+                maxRow[1] = newSum;
+            }
+        }
+        return maxRow;
     }
 }
