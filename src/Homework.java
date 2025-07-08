@@ -413,18 +413,32 @@ public class Homework {
     }
 
     public static double[] employeeHours(double[][] hours) {
-        int sum = 0;
+        double[] sumHours = new double[hours.length];
         for (int i = 0; i < hours.length; i++) {
+            int sum = 0;
             for (int j = 0; j < hours.length; j++) {
                 sum += hours[i][j];
             }
+            sumHours[i] = sum;
         }
-            return null;
+        return sumHours;
         }
-
 
     public static double[][] addMatrix(double[][] a, double[][] b){
-        return null;
+        double sum1 = 0;
+        double sum2 = 0;
+        double sum3 = 0;
+        double sum4 = 0;
+        double[][] sum = null;
+        sum1 = a[0][0] + b[0][0];
+        sum2 = a[1][0] + b[1][0];
+        sum3 = a[0][1] + b[0][1];
+        sum4 = a[1][1] + b[1][1];
+        sum[0][0] = sum1;
+        sum[1][0] = sum2;
+        sum[0][1] = sum3;
+        sum[1][1] = sum4;
+        return sum;
     }
 
     public static double[] sumMaxRow(double[][] array){

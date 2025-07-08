@@ -17,6 +17,7 @@ public class Sudoku {
     }
 
     public static boolean isCorrect(int[][] plan){
+
         return false;
     }
 
