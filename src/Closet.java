@@ -3,7 +3,6 @@ public class Closet {
     String name;
     int items;
     String brand;
-    int chanel;
     boolean isOpen;
 
     public Closet() {
@@ -18,13 +17,8 @@ public class Closet {
         brand = newBrand;
     }
 
-    public void Open(){
+    public void isOpen(){
         if(!isOpen){
-            isOpen = true;
-        }
-    }
-    public void Close(){
-        if(isOpen){
             isOpen = true;
         }
     }
