@@ -1,16 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        int[] [] array = new int[5][5];
-                Homework.fillArray(array);
-//        System.out.println();
-        System.out.println(Homework.sumArray(array));
-        }
-
-//        int [] massive = new int[10];
-//        int [] copyMassive = new int[10];
-//        Homework.randomMassive(massive);
-//        Homework.printMassive(massive);
-//        copyMassive = Homework.copyMassive(massive);
-//        Homework.printMassive(copyMassive);
-//        massive.clone();
-        }
+        TV tv1 = new TV();
+        TV tv2 = new TV("Samsung");
+        TV tv3 = new TV("LG", 123456);
+        System.out.println(tv1);
+        System.out.println(tv3.name + tv3.serialNumber);
+        tv3.setVolume(20);
+        System.out.println(tv3.volume);
+        System.out.println();
+        System.out.println(tv1.volume);
+        System.out.println(tv1.chanel);
+        System.out.println(tv1.isOn);
+        System.out.println(tv1.name);
+    }
+}

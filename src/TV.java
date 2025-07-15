@@ -9,9 +9,7 @@ public class TV {
     public TV() {
     }
 
-    public TV(String newName) {
-        name = newName;
-    }
+    public TV(String newName) {name = newName;}
 
     public TV(String newName, int newSerialNumber) {
         name = newName;
@@ -28,9 +26,9 @@ public class TV {
             isOn = true;
         }
     }
-    public void setChanel(int chanel){
+    public void setChanel(int newChanel){
         if(isOn) {
-            chanel = 0;
+            chanel = newChanel;
         }
     }
     public void increaseChanel(){
@@ -43,10 +41,8 @@ public class TV {
             chanel--;
         }
     }
-    public void setVolume(int volume){
-        if(isOn) {
-            volume = 0;
-        }
+    public void setVolume(int newVolume){
+        volume = newVolume;
     }
     public void increaseVolume(){
         if(isOn){

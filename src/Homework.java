@@ -22,7 +22,7 @@ public class Homework {
         else System.out.println("The equation has no real roots");
     }
 
-    public static void random_number() {
+    public static void randomMonth() {
         int randomInt = (int) (Math.random() * 12) + 1;
         switch (randomInt) {
             case 1:
@@ -425,19 +425,12 @@ public class Homework {
         }
 
     public static double[][] addMatrix(double[][] a, double[][] b){
-        double sum1 = 0;
-        double sum2 = 0;
-        double sum3 = 0;
-        double sum4 = 0;
         double[][] sum = null;
-        sum1 = a[0][0] + b[0][0];
-        sum2 = a[1][0] + b[1][0];
-        sum3 = a[0][1] + b[0][1];
-        sum4 = a[1][1] + b[1][1];
-        sum[0][0] = sum1;
-        sum[1][0] = sum2;
-        sum[0][1] = sum3;
-        sum[1][1] = sum4;
+        for(int i = 0; i < a.length; i++){
+            for(int j = 0; j < a.length; j++){
+                sum[i][j] = a[i][j]+b[i][j];
+            }
+        }
         return sum;
     }
 
