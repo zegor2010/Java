@@ -9,7 +9,7 @@ public class TV {
     public TV() {
     }
 
-    public TV(String newName) {name = newName;}
+    private TV(String newName) {name = newName;}
 
     public TV(String newName, int newSerialNumber) {
         name = newName;
