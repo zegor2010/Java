@@ -1,11 +1,21 @@
+import java.util.Random;
+
 public class Rectangle {
     private double width = 1;
     private double height = 1;
+    private String color ="";
 
     public Rectangle(){}
-    public Rectangle(double newWidth, double newHeight){
-        width = newWidth;
-        height = newHeight;
+    public Rectangle (double width) {
+        this.width=width;
+    }
+    public Rectangle(double width, double height){
+        this(width);
+            this.height = height;
+    }
+    public Rectangle(double width,double height,String color){
+        this(width, height);
+        this.color=color;
     }
 
     public double getWidth() {
@@ -27,5 +37,6 @@ public class Rectangle {
     public double getPerimeter(){
         return width*2+height*2;
     }
+
 }
 
