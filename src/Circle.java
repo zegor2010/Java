@@ -6,14 +6,14 @@ public class Circle {
         numberCircles++;
     }
 
-    public Circle(double newRadius){
-        radius = newRadius;
+    public Circle(double radius){
+        this.radius = radius;
         numberCircles++;
     }
 
-    public void setRadius(double newRadius) {
-        if(newRadius > 0){
-            radius = newRadius;
+    public void setRadius(double radius) {
+        if(radius > 0){
+            this.radius = radius;
         }
         else{
             System.out.println("can't");
