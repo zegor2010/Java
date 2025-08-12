@@ -17,5 +17,9 @@ public class Main {
 //        circle1.setRadius(5);
 //        System.out.println(circle1.getArea());
 //        System.out.println(Circle.getNumberCircles());
+        double[][] massive = new double[2][2];
+       // massive [0][0]=
+        System.out.println(System.currentTimeMillis());
     }
+
 }
