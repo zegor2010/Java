@@ -1,9 +1,12 @@
+
+
 public class MyPoint {
     private double x;
     private double y;
 
     public MyPoint(){
-        MyPoint = 0, 0;
+        x = 0;
+        y = 0;
     }
     public MyPoint(double x, double y) {
         this.x = x;
