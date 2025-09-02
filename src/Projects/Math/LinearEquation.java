@@ -1,3 +1,5 @@
+package Projects.Math;
+
 public class LinearEquation {
     private int a;
     private int b;

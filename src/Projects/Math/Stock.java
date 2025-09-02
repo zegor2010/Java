@@ -1,3 +1,5 @@
+package Projects.Math;
+
 public class Stock {
     private char symbol;
     private String name;

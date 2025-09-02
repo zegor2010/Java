@@ -1,3 +1,5 @@
+package Projects.Math;
+
 public class BMI {
     private String name;
     private int age;

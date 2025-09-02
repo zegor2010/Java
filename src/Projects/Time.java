@@ -1,3 +1,5 @@
+package Projects;
+
 public class Time {
     long hour;
     long minute;

@@ -1,4 +1,4 @@
-
+package Projects;
 
 public class MyPoint {
     private double x;

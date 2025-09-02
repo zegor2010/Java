@@ -1,3 +1,5 @@
+package Projects;
+
 public class RegularPolygon {
     private int n = 3;
     private double side = 1;

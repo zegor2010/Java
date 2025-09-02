@@ -1,3 +1,5 @@
+package Projects.Math;
+
 public class MyInteger {
     private int value;
 

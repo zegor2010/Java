@@ -1,3 +1,5 @@
+package Projects.Math;
+
 public class QuadraticEquation {
     private double a;
     private double b;

@@ -1,4 +1,4 @@
-import java.util.Random;
+package Projects.Math;
 
 public class Rectangle {
     private double width = 1;

@@ -1,3 +1,5 @@
+package Projects.Math;
+
 import java.util.Date;
 
 public class Loan {
@@ -6,8 +8,8 @@ public class Loan {
     double loanAmount = 1000;
     java.util.Date loanDate = new Date();
 
-    Loan(){}
-    Loan(double annualInterestRate, int numberOfYears, double loanAmount){
+    public Loan(){}
+    public Loan(double annualInterestRate, int numberOfYears, double loanAmount){
         this.annualInterestRate = annualInterestRate;
         this.numberOfYears = numberOfYears;
         this.loanAmount = loanAmount;

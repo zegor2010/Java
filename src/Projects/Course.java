@@ -1,3 +1,5 @@
+package Projects;
+
 public class Course {
         private String courseName;
         private String[] students = new String[20];

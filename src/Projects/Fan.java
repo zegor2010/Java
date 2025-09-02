@@ -1,3 +1,5 @@
+package Projects;
+
 public class Fan {
     int SLOW = 1;
     int MEDIUM = 2;
