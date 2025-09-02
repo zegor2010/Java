@@ -14,7 +14,6 @@ public class StackOfIntegers {
         top++;
         elements[top] = value;
     }
-
     public int pop() {
         for (int i = 0; i < elements.length; i++) {
             if (elements[i] == 0) {
@@ -25,7 +24,6 @@ public class StackOfIntegers {
         }
         return top;
     }
-
     public int peek() {
         for (int i = 0; i < elements.length; i++) {
             if (elements[i] == 0) {
@@ -35,14 +33,12 @@ public class StackOfIntegers {
         }
         return top;
     }
-
     public boolean isEmpty() {
         if (elements[0] == 0) {
             return true;
         }
         return false;
     }
-
     public boolean isFull() {
         for (int i = 0; i < elements.length; i++) {
             if (elements[i] == 0) {
@@ -51,17 +47,14 @@ public class StackOfIntegers {
         }
         return true;
     }
-
     public int size() {
         return top;
     }
-
     public void clear() {
         for (int i = 0; i < elements.length; i++){
             elements[i] = 0;
         }
     }
-
     public int search(int value) {
         for (int i = 0; i < elements.length; i++) {
             if (elements[i] == value) {
@@ -70,7 +63,6 @@ public class StackOfIntegers {
         }
         return -1;
     }
-
     public boolean contains(int value) {
         for (int i = 0; i < elements.length; i++) {
             if (elements[i] == value) {
@@ -79,7 +71,6 @@ public class StackOfIntegers {
         }
         return false;
     }
-
     public void print() {
         for (int i = 0; i < elements.length; i++) {
             System.out.print(elements[i] + " ");

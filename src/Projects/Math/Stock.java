@@ -6,12 +6,12 @@ public class Stock {
     private double previousClosingPrice;
     private double currentPrice;
 
-    private Stock(char newSymbol, String newName){
+    public Stock(char newSymbol, String newName){
         name = newName;
         symbol = newSymbol;
     }
 
-    private double getChangePercent(){
+    public double getChangePercent(){
         return previousClosingPrice/currentPrice * 100;
     }
 }
