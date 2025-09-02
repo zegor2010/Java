@@ -3,9 +3,9 @@ package Projects.Math;
 import java.util.Date;
 
 public class Loan {
-    double annualInterestRate = 2.5;
-    int numberOfYears = 1;
-    double loanAmount = 1000;
+    private double annualInterestRate = 2.5;
+    private int numberOfYears = 1;
+    private double loanAmount = 1000;
     java.util.Date loanDate = new Date();
 
     public Loan(){}

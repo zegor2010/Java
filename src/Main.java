@@ -1,3 +1,4 @@
+import Data.List.StackOfIntegers;
 import Projects.Math.Circle;
 
 public class Main {
@@ -22,6 +23,10 @@ public class Main {
         double[][] massive = new double[2][2];
        // massive [0][0]=
         System.out.println(System.currentTimeMillis());
+
+        StackOfIntegers stack = new StackOfIntegers(1);
+        stack.push(5);
+        stack.print();
+        }
     }
 
-}

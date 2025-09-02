@@ -1,11 +1,11 @@
 package Data.List;
 
-public class StackOfIntegers {
+public class QueueOfIntegers {
     private int[] elements;
     private int top = -1;
     private int capacity;
 
-    public StackOfIntegers(int size) {
+    public QueueOfIntegers(int size) {
         capacity = size;
         elements = new int[capacity];
     }
