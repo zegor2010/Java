@@ -15,9 +15,4 @@ public class Factorial {
         return result;
     }
 }
-class FactorialTest {
-    public static void main(String[] args) {
-        BigInteger result = Factorial.factorial(100);
-        System.out.println(result);
-    }
-}
+

@@ -1,4 +1,4 @@
-import Data.List.StackOfIntegers;
+import Projects.Data.StackOfIntegers;
 import Projects.Math.Circle;
 
 public class Main {

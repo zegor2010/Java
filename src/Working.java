@@ -1,5 +1,3 @@
-import Data.List.StackOfIntegers;
-
 import java.math.BigDecimal;
 
 public class Working {

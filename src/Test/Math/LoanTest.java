@@ -1,4 +1,4 @@
-package Test;
+package Test.Math;
 
 import Projects.Math.Loan;
 

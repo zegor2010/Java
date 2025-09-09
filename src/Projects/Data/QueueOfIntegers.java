@@ -1,27 +1,25 @@
-package Data.List;
+package Projects.Data;
 
 public class QueueOfIntegers {
     private int[] elements;
-    private int top = -1;
     private int capacity;
+    private int top = capacity--;
 
     public QueueOfIntegers(int size) {
         capacity = size;
         elements = new int[capacity];
     }
 
-    public void push(int value) {
+    public void add(int value) {
         top++;
         elements[top] = value;
     }
-    public int pop() {
-        int a = elements[top];
-        elements[top] = 0;
+    public void pop(int position) {
+        elements[position++] = 0;
         top--;
-        return a;
     }
-    public int peek() {
-        return top;
+    public int peek(int position) {
+        return elements[position++];
     }
     public boolean isEmpty() {
         if (top == -1) {

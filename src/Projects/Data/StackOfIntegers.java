@@ -1,4 +1,4 @@
-package Data.List;
+package Projects.Data;
 
 public class StackOfIntegers {
     private int[] elements;
