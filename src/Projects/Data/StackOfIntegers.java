@@ -30,13 +30,13 @@ public class StackOfIntegers {
         return false;
     }
     public boolean isFull() {
-        if (top == capacity--) {
-            return false;
+        if (top == capacity-1) {
+            return true;
         }
-        return true;
+        return false;
     }
     public int size() {
-        return top++;
+        return top+1;
     }
     public void clear() {
         for (int i = 0; i < elements.length; i++){

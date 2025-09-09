@@ -9,6 +9,7 @@ public class StackOfIntegersTest {
         stackOfIntegers.push(6);
         stackOfIntegers.push(7);
         stackOfIntegers.push(8);
+
         stackOfIntegers.pop();
         stackOfIntegers.peek();
         stackOfIntegers.isEmpty();

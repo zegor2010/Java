@@ -3,7 +3,7 @@ package Projects.Data;
 public class QueueOfIntegers {
     private int[] elements;
     private int capacity;
-    private int top = capacity--;
+    private int top = -1;
 
     public QueueOfIntegers(int size) {
         capacity = size;
@@ -28,13 +28,13 @@ public class QueueOfIntegers {
         return false;
     }
     public boolean isFull() {
-        if (top == capacity--) {
-            return false;
+        if (top == capacity-1) {
+            return true;
         }
-        return true;
+        return false;
     }
     public int size() {
-        return top++;
+        return top+1;
     }
     public void clear() {
         for (int i = 0; i < elements.length; i++){
@@ -59,8 +59,9 @@ public class QueueOfIntegers {
         return false;
     }
     public void print() {
-        for (int i = 0; i < top; i++) {
+        for (int i = 0; i <= top; i++) {
             System.out.print(elements[i] + " ");
         }
+        System.out.println();
     }
 }
