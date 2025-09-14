@@ -9,15 +9,14 @@ public class StackOfIntegersTest {
         stackOfIntegers.push(6);
         stackOfIntegers.push(7);
         stackOfIntegers.push(8);
-
         stackOfIntegers.pop();
         stackOfIntegers.peek();
-        stackOfIntegers.isEmpty();
-        stackOfIntegers.isFull();
-        stackOfIntegers.size();
-        stackOfIntegers.clear();
-        stackOfIntegers.search(5);
-        stackOfIntegers.contains(5);
+        System.out.println(stackOfIntegers.isEmpty());
+        System.out.println(stackOfIntegers.isFull());
+        System.out.println(stackOfIntegers.size());
+        //stackOfIntegers.clear();
+        System.out.println(stackOfIntegers.search(5));
+        System.out.println(stackOfIntegers.contains(5));
         stackOfIntegers.print();
     }
 }

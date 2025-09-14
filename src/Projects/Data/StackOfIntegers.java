@@ -14,14 +14,12 @@ public class StackOfIntegers {
         top++;
         elements[top] = value;
     }
-    public int pop() {
-        int a = elements[top];
+    public void pop() {
         elements[top] = 0;
         top--;
-        return a;
     }
     public int peek() {
-        return top;
+        return elements[top];
     }
     public boolean isEmpty() {
         if (top == -1) {

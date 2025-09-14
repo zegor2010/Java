@@ -4,22 +4,23 @@ public class QueueOfIntegers {
     private int[] elements;
     private int capacity;
     private int top = -1;
+    private int first = 0;
 
     public QueueOfIntegers(int size) {
         capacity = size;
         elements = new int[capacity];
     }
 
-    public void add(int value) {
+    public void push(int value) {
         top++;
         elements[top] = value;
     }
-    public void pop(int position) {
-        elements[position++] = 0;
+    public void pop() {
+        elements[first] = 0;
         top--;
     }
-    public int peek(int position) {
-        return elements[position++];
+    public int peek() {
+        return elements[first];
     }
     public boolean isEmpty() {
         if (top == -1) {
